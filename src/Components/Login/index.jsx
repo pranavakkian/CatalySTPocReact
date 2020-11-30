@@ -1,7 +1,5 @@
-import React from 'react';
-
-const loginPage = () => (
+const Login = () => (
   <h1>Login Page.</h1>
 );
 
-export default loginPage;
+export default Login;
