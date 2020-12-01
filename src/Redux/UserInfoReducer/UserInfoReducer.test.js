@@ -12,6 +12,7 @@ describe('User info reducer action', () => {
     expect(UserInfoReducer(undefined, { type: SET_USER_NAME, payload: 'admin' }))
       .toStrictEqual({ ...initialState, userName: 'admin' });
   });
+
   test('Default', () => {
     expect(UserInfoReducer(undefined, { type: null }))
       .toStrictEqual({ ...initialState });
