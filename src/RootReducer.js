@@ -1,6 +1,6 @@
-import combinedReducers from 'react-dom';
+import { combineReducers } from 'redux';
 import UserInfoReducer from './Redux/UserInfoReducer';
 
-const RootReducer = combinedReducers({ UserInfoReducer });
+const RootReducer = combineReducers({ UserInfoReducer });
 
 export default RootReducer;
