@@ -6,12 +6,12 @@ import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css';
-import Login from './Components/Login';
+import Routes from './Components/Routes';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Login />
+      <Routes />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root'),
