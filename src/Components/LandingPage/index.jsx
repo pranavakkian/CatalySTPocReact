@@ -3,10 +3,9 @@ import { useSelector } from 'react-redux';
 
 function LandingPage() {
   const userName = useSelector((state) => state.UserInfoReducer.userName);
-  const display = `Welcome ${userName}`;
   return (
     <div>
-      <h1>{display}</h1>
+      <h1>{`Welcome ${userName}`}</h1>
     </div>
   );
 }
