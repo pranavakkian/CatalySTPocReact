@@ -1,5 +1,10 @@
+import LoginForm from './LoginForm';
+
 const Login = () => (
-  <h1>Login Page.</h1>
+  <div>
+    <h1>Login Page.</h1>
+    <LoginForm />
+  </div>
 );
 
 export default Login;
