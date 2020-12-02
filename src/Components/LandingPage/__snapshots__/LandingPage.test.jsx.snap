@@ -3,7 +3,9 @@
 exports[`LandingPage Component rendered successfully 1`] = `
 <div>
   <div>
-    <h1>
+    <h1
+      class="ui center aligned header"
+    >
       Welcome
        
       test

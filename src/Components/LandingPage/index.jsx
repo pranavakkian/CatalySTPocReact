@@ -1,14 +1,15 @@
 import { useSelector } from 'react-redux';
+import { Header } from 'semantic-ui-react';
 
 function LandingPage() {
   const userName = useSelector((state) => state.UserInfoReducer.userName);
   return (
     <div>
-      <h1>
+      <Header as="h1" textAlign="center">
         Welcome
         {' '}
         {userName}
-      </h1>
+      </Header>
     </div>
   );
 }
