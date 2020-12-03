@@ -17,7 +17,7 @@ const LandingPage = memo(() => {
   return (
     <div>
       <Button floated="right" type="submit" onClick={signout}>Sign-out</Button>
-      <Header as="h1" textAlign="center" className="header">
+      <Header as="h1" textAlign="center">
         Welcome
         {' '}
         {userName}
