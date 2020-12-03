@@ -3,6 +3,12 @@
 exports[`LandingPage Component rendered successfully 1`] = `
 <div>
   <div>
+    <button
+      class="ui right floated button"
+      type="submit"
+    >
+      Sign-out
+    </button>
     <h1
       class="ui center aligned header"
     >
