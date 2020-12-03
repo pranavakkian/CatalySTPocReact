@@ -2,13 +2,14 @@ import { useSelector } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import LandingPage from '../LandingPage/index';
 import Login from '../Login';
-import RootPath from '../../Constants/Constants';
+import RootPath from '../../Constants';
 
 const Routes = () => {
   const isLoggedIn = useSelector((state) => state.UserInfoReducer.isLoggedIn);
   return isLoggedIn ? (
     <Switch>
       <Route path={RootPath} component={LandingPage} />
+      <Route path="/addcolleague" />
     </Switch>
   ) : (
     <Switch>
