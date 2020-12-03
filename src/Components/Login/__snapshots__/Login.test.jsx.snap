@@ -37,11 +37,6 @@ exports[`Login Component rendered successfully 1`] = `
         </button>
       </form>
     </div>
-    <button
-      class="ui button"
-    >
-      Show Modal
-    </button>
   </div>
 </div>
 `;

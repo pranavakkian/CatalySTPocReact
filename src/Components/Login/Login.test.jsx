@@ -24,7 +24,6 @@ describe('Login', () => {
     render(<Provider store={store}><Login /></Provider>);
     userEvent.click(screen.getByRole('button', { name: 'Submit' }));
     expect(screen.getByText('Invalid Credentials.')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Show Modal' })).toBeInTheDocument();
     userEvent.click(screen.getByRole('button', { name: 'OK' }));
     const { UserInfoReducer } = store.getState();
     expect(UserInfoReducer).toStrictEqual({ isLoggedIn: false, userName: null });

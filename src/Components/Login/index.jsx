@@ -23,9 +23,6 @@ const Login = () => {
       <Modal
         centered={false}
         open={open}
-        onClose={() => setOpen(false)}
-        onOpen={() => setOpen(true)}
-        trigger={<Button>Show Modal</Button>}
       >
         <Modal.Content>
           <Modal.Description>
