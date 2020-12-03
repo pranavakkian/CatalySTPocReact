@@ -10,7 +10,7 @@ exports[`LandingPage Component rendered successfully 1`] = `
       Sign-out
     </button>
     <h1
-      class="ui center aligned header header"
+      class="ui center aligned header"
     >
       Welcome
        
