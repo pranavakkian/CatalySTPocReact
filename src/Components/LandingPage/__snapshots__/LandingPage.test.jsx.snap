@@ -10,12 +10,34 @@ exports[`LandingPage Component rendered successfully 1`] = `
       Sign-out
     </button>
     <h1
-      class="ui center aligned header"
+      class="ui center aligned header header"
     >
       Welcome
        
       test
     </h1>
+    <div
+      class="ui center aligned container"
+    >
+      <div
+        class="addbutton"
+      >
+        <button
+          class="ui button"
+        >
+          Add Colleague
+        </button>
+      </div>
+      <div
+        class="viewbutton"
+      >
+        <button
+          class="ui button"
+        >
+          View Colleague
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 `;
