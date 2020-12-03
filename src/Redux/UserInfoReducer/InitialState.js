@@ -1,5 +1,5 @@
 const initialState = {
-  isLoggedIn: true,
+  isLoggedIn: false,
   userName: null,
 };
 export default initialState;
