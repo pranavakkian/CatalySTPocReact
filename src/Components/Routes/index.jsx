@@ -8,8 +8,7 @@ const Routes = () => {
   const isLoggedIn = useSelector((state) => state.UserInfoReducer.isLoggedIn);
   return isLoggedIn ? (
     <Switch>
-      <Route path={RootPath} component={LandingPage} />
-      <Route path="/addcolleague" />
+      <Route exact path={RootPath} component={LandingPage} />
     </Switch>
   ) : (
     <Switch>
