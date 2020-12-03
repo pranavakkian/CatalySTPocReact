@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Button, Header } from 'semantic-ui-react';
 import { handleIsLoggedIn, handleSetUserName } from '../../Redux/UserInfoReducer/Action';
 
-function LandingPage() {
+const LandingPage = () => {
   const userName = useSelector((state) => state.UserInfoReducer.userName);
   const dispatch = useDispatch();
   const signout = () => {
@@ -19,6 +19,6 @@ function LandingPage() {
       </Header>
     </div>
   );
-}
+};
 
 export default LandingPage;
