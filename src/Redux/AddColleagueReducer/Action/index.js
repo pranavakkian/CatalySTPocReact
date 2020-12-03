@@ -1,6 +1,6 @@
-import { GET_COLLEAGUE_DATA } from '../../Types';
+import { SET_COLLEAGUE_DATA } from '../../Types';
 
-export const handleGetColleagueData = (value) => ({
-  type: GET_COLLEAGUE_DATA,
+export const handleSetColleagueData = (value) => ({
+  type: SET_COLLEAGUE_DATA,
   payload: value,
 });

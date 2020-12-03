@@ -1,8 +1,8 @@
-import { GET_COLLEAGUE_DATA } from '../../Types';
-import { handleGetColleagueData } from '.';
+import { SET_COLLEAGUE_DATA } from '../../Types';
+import { handleSetColleagueData } from '.';
 
 describe('Add Colleague Reducer Action', () => {
-  test('handleGetColleagueData', () => {
-    expect(handleGetColleagueData('test')).toStrictEqual({ type: GET_COLLEAGUE_DATA, payload: 'test' });
+  test('handleSetColleagueData', () => {
+    expect(handleSetColleagueData('test')).toStrictEqual({ type: SET_COLLEAGUE_DATA, payload: 'test' });
   });
 });
