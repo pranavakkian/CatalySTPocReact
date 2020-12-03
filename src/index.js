@@ -4,14 +4,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css';
 import Routes from './Components/Routes';
+import Store from './Store';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes />
+      <Provider Store={Store}>
+        <Routes />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root'),
