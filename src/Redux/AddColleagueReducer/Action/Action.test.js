@@ -1,14 +1,8 @@
-import { GET_COLLEAGUE_NAME, GET_COLLEAGUE_JOB_TITLE, GET_COLLEAGUE_CONTACT } from '../../Types';
-import { handleGetColleagueName, handleGetColleagueJobTitle, handleGetColleagueContact } from '.';
+import { GET_COLLEAGUE_DATA } from '../../Types';
+import { handleGetColleagueData } from '.';
 
 describe('Add Colleague Reducer Action', () => {
-  test('handleGetColleagueName', () => {
-    expect(handleGetColleagueName('test')).toStrictEqual({ type: GET_COLLEAGUE_NAME, payload: 'test' });
-  });
-  test('handleGetColleagueTitle', () => {
-    expect(handleGetColleagueJobTitle('test')).toStrictEqual({ type: GET_COLLEAGUE_JOB_TITLE, payload: 'test' });
-  });
-  test('handleGetColleagueContact', () => {
-    expect(handleGetColleagueContact('test')).toStrictEqual({ type: GET_COLLEAGUE_CONTACT, payload: 'test' });
+  test('handleGetColleagueData', () => {
+    expect(handleGetColleagueData('test')).toStrictEqual({ type: GET_COLLEAGUE_DATA, payload: 'test' });
   });
 });
