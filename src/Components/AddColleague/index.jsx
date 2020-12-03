@@ -1,11 +1,12 @@
-// import React from 'react';
+import { memo } from 'react';
+import { Header } from 'semantic-ui-react';
 
-function AddColleaguePage() {
-  return (
-    <div>
-      <h1> Add Colleague</h1>
-    </div>
-  );
-}
+const AddColleaguePage = memo(() => (
+  <div>
+    <Header as="h1" textAlign="center">
+      Add Colleague
+    </Header>
+  </div>
+));
 
 export default AddColleaguePage;
