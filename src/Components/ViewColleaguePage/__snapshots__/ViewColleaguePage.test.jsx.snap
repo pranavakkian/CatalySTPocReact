@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewColleaguePage Rendered View Colleague Page Successfully 1`] = `
+<div>
+  <div>
+    <h1
+      class="ui center aligned header"
+    >
+      Colleague Info
+    </h1>
+  </div>
+</div>
+`;
