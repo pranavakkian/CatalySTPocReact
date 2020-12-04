@@ -6,43 +6,29 @@ describe('Colleague Data Reducer', () => {
   test('Setting 1 Colleague Data', () => {
     expect(ColleagueReducer(undefined, {
       type: SET_COLLEAGUE_DATA,
-      payload: [{
+      payload: {
         name: 'xyz',
         jobTitle: 'Engineer',
         contact: '987654321',
-      }],
+      },
     }))
       .toStrictEqual({
-        ...initialState,
         data: [{
           name: 'xyz',
           jobTitle: 'Engineer',
           contact: '987654321',
         }],
       });
-  });
-  test('Setting 2 Colleague Data', () => {
     expect(ColleagueReducer(undefined, {
       type: SET_COLLEAGUE_DATA,
-      payload: [{
-        name: 'xyz',
-        jobTitle: 'Engineer',
-        contact: '987654321',
-      },
-      {
+      payload: {
         name: 'ABC',
         jobTitle: 'Cloud Engineer',
         contact: '123456789',
-      }],
+      },
     }))
       .toStrictEqual({
-        ...initialState,
         data: [{
-          name: 'xyz',
-          jobTitle: 'Engineer',
-          contact: '987654321',
-        },
-        {
           name: 'ABC',
           jobTitle: 'Cloud Engineer',
           contact: '123456789',
