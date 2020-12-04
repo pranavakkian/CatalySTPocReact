@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddColleaguePage Component rendered successfully 1`] = `
+<div>
+  <div>
+    <h1
+      class="ui center aligned header"
+    >
+      Add Colleague
+    </h1>
+  </div>
+</div>
+`;

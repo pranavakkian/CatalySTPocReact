@@ -1,2 +1,2 @@
-const RootPath = '/';
-export default RootPath;
+export const RootPath = '/';
+export const addColleaguePath = '/addcolleague';
