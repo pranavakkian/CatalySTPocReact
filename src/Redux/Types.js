@@ -1,2 +1,3 @@
 export const IS_LOGGED_IN = 'IS_LOGGED_IN';
 export const SET_USER_NAME = 'SET_USER_NAME';
+export const SET_COLLEAGUE_DATA = 'SET_COLLEAGUE_DATA';
