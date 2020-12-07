@@ -48,4 +48,18 @@ describe('LandingPage', () => {
     userEvent.click(screen.getByRole('button', { name: 'Add Colleague' }));
     expect(history.location.pathname).toBe('/addcolleague');
   });
+
+  test('ViewColleague Button Working Properly', () => {
+    const store = mockStore(() => ({
+      UserInfoReducer: {
+        isLoggedIn: true,
+        userName: 'test',
+      },
+    }));
+    const history = createMemoryHistory();
+    render(<Router history={history}><Provider store={store}><LandingPage /></Provider></Router>);
+    expect(history.location.pathname).toBe('/');
+    userEvent.click(screen.getByRole('button', { name: 'View Colleague' }));
+    expect(history.location.pathname).toBe('/viewcolleague');
+  });
 });
