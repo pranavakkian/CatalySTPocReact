@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Button, Dropdown, Form } from 'semantic-ui-react';
+import handleSetColleagueData from '../../../Redux/AddColleagueReducer/Action';
 
 const AddColleagueForm = () => {
   const [username, setUsername] = useState('');
@@ -10,6 +12,10 @@ const AddColleagueForm = () => {
     { key: '02', text: 'Developer', value: 'Developer' },
 
   ];
+  const dispatch = useDispatch();
+  const handleAddcolleague = () => {
+    dispatch(handleSetColleagueData({ name: username, contact, jobTitle: jobtitle }));
+  };
   return (
     <div>
       <Form>
@@ -30,7 +36,7 @@ const AddColleagueForm = () => {
         <Form.Field>
           <input id="contact" placeholder="Contact" value={contact} label="Contact" onChange={(e) => setContact(e.target.value)} />
         </Form.Field>
-        <Button type="submit">Submit</Button>
+        <Button type="submit" onClick={handleAddcolleague}>Submit</Button>
       </Form>
     </div>
   );
