@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { memo } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button, Container, Header } from 'semantic-ui-react';
-import { ADDCOLLEAGUE_PATH, VIEWCOLLEAGUE_PATH } from '../../Constants';
+import { ADD_COLLEAGUE_PATH, VIEW_COLLEAGUE_PATH } from '../../Constants';
 import { handleIsLoggedIn, handleSetUserName } from '../../Redux/UserInfoReducer/Action';
 import './landingPage.css';
 
@@ -24,10 +24,10 @@ const LandingPage = memo(() => {
       </Header>
       <Container textAlign="center">
         <div className="addbutton">
-          <Button onClick={() => history.push(ADDCOLLEAGUE_PATH)}>Add Colleague</Button>
+          <Button onClick={() => history.push(ADD_COLLEAGUE_PATH)}>Add Colleague</Button>
         </div>
         <div className="viewbutton">
-          <Button onClick={() => history.push(VIEWCOLLEAGUE_PATH)}>View Colleague</Button>
+          <Button onClick={() => history.push(VIEW_COLLEAGUE_PATH)}>View Colleague</Button>
         </div>
       </Container>
 

@@ -1,3 +1,3 @@
 export const ROOT_PATH = '/';
-export const ADDCOLLEAGUE_PATH = '/addcolleague';
-export const VIEWCOLLEAGUE_PATH = '/viewcolleague';
+export const ADD_COLLEAGUE_PATH = '/addcolleague';
+export const VIEW_COLLEAGUE_PATH = '/viewcolleague';
