@@ -4,7 +4,7 @@ exports[`Routes Component rendered successfully 1`] = `
 <div>
   <div>
     <h1>
-      Login Page.
+      Login Page
     </h1>
     <div>
       <form

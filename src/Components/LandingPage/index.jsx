@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { memo } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button, Container, Header } from 'semantic-ui-react';
-import { addColleaguePath } from '../../Constants';
+import { addColleaguePath, viewColleaguePath } from '../../Constants';
 import { handleIsLoggedIn, handleSetUserName } from '../../Redux/UserInfoReducer/Action';
 import './landingPage.css';
 
@@ -27,7 +27,7 @@ const LandingPage = memo(() => {
           <Button onClick={() => history.push(addColleaguePath)}>Add Colleague</Button>
         </div>
         <div className="viewbutton">
-          <Button>View Colleague</Button>
+          <Button onClick={() => history.push(viewColleaguePath)}>View Colleague</Button>
         </div>
       </Container>
 
