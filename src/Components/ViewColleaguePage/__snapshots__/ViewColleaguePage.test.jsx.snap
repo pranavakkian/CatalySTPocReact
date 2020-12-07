@@ -7,6 +7,59 @@ exports[`ViewColleaguePage Rendered View Colleague Page Successfully 1`] = `
       class="ui center aligned header"
     >
       Colleague Information
+      <div
+        class="ui divider"
+      />
+      <table
+        class="ui compact table"
+      >
+        <thead
+          class=""
+        >
+          <tr
+            class=""
+          >
+            <th
+              class=""
+            >
+              Employee
+            </th>
+            <th
+              class=""
+            >
+              Job Title
+            </th>
+            <th
+              class=""
+            >
+              Contact
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class=""
+        >
+          <tr
+            class=""
+          >
+            <td
+              class=""
+            >
+              --
+            </td>
+            <td
+              class=""
+            >
+              --
+            </td>
+            <td
+              class=""
+            >
+              --
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </h1>
   </div>
 </div>
