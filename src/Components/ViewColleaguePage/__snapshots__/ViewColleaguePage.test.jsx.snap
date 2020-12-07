@@ -6,7 +6,7 @@ exports[`ViewColleaguePage Rendered View Colleague Page Successfully 1`] = `
     <h1
       class="ui center aligned header"
     >
-      Colleague Info
+      Colleague Information
     </h1>
   </div>
 </div>

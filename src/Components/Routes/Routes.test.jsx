@@ -39,7 +39,7 @@ describe('Routes', () => {
         </Router>
       </Provider>,
     );
-    expect(screen.getByText('Login Page')).not.toBeNull();
+    expect(screen.getByText('Login Page')).toBeInTheDocument();
   });
 
   test('Landing Page working successfully', () => {
@@ -56,6 +56,6 @@ describe('Routes', () => {
         </Router>
       </Provider>,
     );
-    expect(screen.getByText('Welcome admin')).not.toBeNull();
+    expect(screen.getByText('Welcome admin')).toBeInTheDocument();
   });
 });
