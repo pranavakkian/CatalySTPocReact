@@ -3,6 +3,8 @@ import {
   screen,
 } from '@testing-library/react';
 import { Provider } from 'react-redux';
+import { createMemoryHistory } from 'history';
+import { Router } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom/extend-expect';
 import configureMockStore from 'redux-mock-store';
@@ -38,9 +40,9 @@ describe('AddColleagueForm', () => {
       },
     }));
     render(<Provider store={store}><AddColleagueForm /></Provider>);
-    expect(screen.getAllByRole('textbox')[1]).toHaveValue('');
-    userEvent.type(screen.getAllByRole('textbox')[1], '123');
-    expect(screen.getAllByRole('textbox')[1]).toHaveValue('123');
+    expect(screen.getByPlaceholderText('contact')).toHaveValue(null);
+    userEvent.type(screen.getByPlaceholderText('contact'), '9976635127');
+    expect(screen.getByPlaceholderText('contact')).toHaveValue(9976635127);
   });
 
   test('handles Dropdown change correctly', () => {
@@ -66,7 +68,7 @@ describe('AddColleagueForm', () => {
     }));
     render(<Provider store={store}><AddColleagueForm /></Provider>);
     userEvent.type(screen.getAllByRole('textbox')[0], 'abc');
-    userEvent.type(screen.getAllByRole('textbox')[1], '1234567899');
+    userEvent.type(screen.getByPlaceholderText('contact'), '1234567899');
     userEvent.click(screen.getByRole('listbox'));
     userEvent.click(screen.getAllByRole('option')[0]);
     userEvent.click(screen.getByRole('button', { name: 'Submit' }));
@@ -79,7 +81,55 @@ describe('AddColleagueForm', () => {
         },
         type: 'SET_COLLEAGUE_DATA',
       },
+
     ];
     expect(store.getActions()).toStrictEqual(expectedAction);
+  });
+  test('Data Submitted Successfull', () => {
+    const store = mockStore(() => ({
+      ColleagueReducer: {
+        data: [],
+      },
+    }));
+    const expectedAction = [
+      {
+        payload: {
+          contact: '1234567899',
+          jobTitle: 'Team Member',
+          name: 'abc',
+        },
+        type: 'SET_COLLEAGUE_DATA',
+      },
+
+    ];
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}><Provider store={store}><AddColleagueForm /></Provider></Router>,
+    );
+    userEvent.type(screen.getAllByRole('textbox')[0], 'abc');
+    userEvent.type(screen.getByPlaceholderText('contact'), '1234567899');
+    userEvent.click(screen.getByRole('listbox'));
+    userEvent.click(screen.getAllByRole('option')[0]);
+    userEvent.click(screen.getByRole('button', { name: 'Submit' }));
+    expect(screen.getByText('Submitted Successfully')).toBeInTheDocument();
+    userEvent.click(screen.getByRole('button', { name: 'OK' }));
+    expect(store.getActions()).toStrictEqual(expectedAction);
+    expect(history.location.pathname).toBe('/');
+  });
+  test('Invalid Credentials', () => {
+    const store = mockStore(() => ({
+      ColleagueReducer: {
+        data: [],
+      },
+    }));
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}><Provider store={store}><AddColleagueForm /></Provider></Router>,
+    );
+    userEvent.click(screen.getByRole('listbox'));
+    userEvent.click(screen.getAllByRole('option')[0]);
+    userEvent.click(screen.getByRole('button', { name: 'Submit' }));
+    userEvent.click(screen.getByRole('button', { name: 'Cancel' }));
+    expect(store.getActions()).toStrictEqual([]);
   });
 });

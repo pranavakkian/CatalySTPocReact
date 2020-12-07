@@ -76,7 +76,8 @@ exports[`AddColleagueForm Component rendered successfully 1`] = `
         <input
           id="contact"
           label="Contact"
-          placeholder="Contact"
+          placeholder="contact"
+          type="number"
           value=""
         />
       </div>
