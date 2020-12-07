@@ -26,6 +26,7 @@ exports[`Routes Component rendered successfully 1`] = `
           <input
             label="Password"
             placeholder="Password"
+            type="password"
             value=""
           />
         </div>

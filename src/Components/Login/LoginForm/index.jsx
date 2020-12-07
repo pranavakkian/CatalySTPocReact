@@ -13,7 +13,7 @@ const LoginForm = (props) => {
           <input id="username" placeholder="Username" label="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
         </Form.Field>
         <Form.Field>
-          <input placeholder="Password" value={password} label="Password" onChange={(e) => setPassword(e.target.value)} />
+          <input placeholder="Password" value={password} label="Password" type="password" onChange={(e) => setPassword(e.target.value)} />
         </Form.Field>
         <Button type="submit" onClick={() => handleLoginForm(username, password)}>Submit</Button>
       </Form>

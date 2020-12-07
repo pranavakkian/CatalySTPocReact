@@ -38,7 +38,7 @@ describe('Login', () => {
     }));
     render(<Provider store={store}><Login /></Provider>);
     userEvent.type(screen.getAllByRole('textbox')[0], 'admin');
-    userEvent.type(screen.getAllByRole('textbox')[1], 'admin123');
+    userEvent.type(screen.getByPlaceholderText('Password'), 'admin123');
     userEvent.click(screen.getByRole('button', { name: 'Submit' }));
     const expectedAction = [
       { payload: true, type: 'IS_LOGGED_IN' },
@@ -46,7 +46,7 @@ describe('Login', () => {
     ];
     expect(store.getActions()).toStrictEqual(expectedAction);
   });
-  test('Login Successful for User-abc', () => {
+  test('Login Successful for User-Abc', () => {
     const store = mockStore(() => ({
       UserInfoReducer: {
         isLoggedIn: false,
@@ -55,7 +55,7 @@ describe('Login', () => {
     }));
     render(<Provider store={store}><Login /></Provider>);
     userEvent.type(screen.getAllByRole('textbox')[0], 'abc');
-    userEvent.type(screen.getAllByRole('textbox')[1], 'abc123');
+    userEvent.type(screen.getByPlaceholderText('Password'), 'abc123');
     userEvent.click(screen.getByRole('button', { name: 'Submit' }));
     const expectedAction = [
       { payload: true, type: 'IS_LOGGED_IN' },
