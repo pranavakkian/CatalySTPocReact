@@ -18,7 +18,7 @@ const Login = () => {
   };
   return (
     <div>
-      <h1>Login Page.</h1>
+      <h1>Login Page</h1>
       <LoginForm handleLoginForm={handleLoginForm} />
       <Modal
         centered={false}

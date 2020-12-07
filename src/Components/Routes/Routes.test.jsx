@@ -39,7 +39,7 @@ describe('Routes', () => {
         </Router>
       </Provider>,
     );
-    expect(screen.getByText('Login Page.')).not.toBeNull();
+    expect(screen.getByText('Login Page')).not.toBeNull();
   });
 
   test('Landing Page working successfully', () => {

@@ -8,6 +8,92 @@ exports[`AddColleaguePage Component rendered successfully 1`] = `
     >
       Add Colleague
     </h1>
+    <div>
+      <form
+        class="ui form"
+      >
+        <div
+          class="field"
+        >
+          <input
+            id="username"
+            label="Username"
+            placeholder="Username"
+            value=""
+          />
+        </div>
+        <div
+          class="field"
+        >
+          <div
+            aria-expanded="false"
+            class="ui fluid selection dropdown"
+            data-testid="dropdown"
+            role="listbox"
+            tabindex="0"
+          >
+            <div
+              aria-atomic="true"
+              aria-live="polite"
+              class="divider default text"
+              role="alert"
+            >
+              Job title
+            </div>
+            <i
+              aria-hidden="true"
+              class="dropdown icon"
+            />
+            <div
+              class="menu transition"
+            >
+              <div
+                aria-checked="false"
+                aria-selected="true"
+                class="selected item"
+                role="option"
+                style="pointer-events: all;"
+              >
+                <span
+                  class="text"
+                >
+                  Team Member
+                </span>
+              </div>
+              <div
+                aria-checked="false"
+                aria-selected="false"
+                class="item"
+                role="option"
+                style="pointer-events: all;"
+              >
+                <span
+                  class="text"
+                >
+                  Developer
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="field"
+        >
+          <input
+            id="contact"
+            label="Contact"
+            placeholder="Contact"
+            value=""
+          />
+        </div>
+        <button
+          class="ui button"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
   </div>
 </div>
 `;
