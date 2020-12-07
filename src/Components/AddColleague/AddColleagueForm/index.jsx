@@ -23,13 +23,14 @@ const AddColleagueForm = () => {
             placeholder="Job title"
             data-testid="dropdown"
             options={options}
+            value={jobtitle}
             onChange={(e, data) => setJobTitle(data.value)}
           />
         </Form.Field>
         <Form.Field>
           <input id="contact" placeholder="Contact" value={contact} label="Contact" onChange={(e) => setContact(e.target.value)} />
         </Form.Field>
-        <Button type="submit" onClick={() => { console.log(jobtitle); }}>Submit</Button>
+        <Button type="submit">Submit</Button>
       </Form>
     </div>
   );

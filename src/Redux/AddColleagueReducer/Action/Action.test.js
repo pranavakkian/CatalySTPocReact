@@ -1,5 +1,5 @@
 import { SET_COLLEAGUE_DATA } from '../../Types';
-import { handleSetColleagueData } from '.';
+import handleSetColleagueData from './index';
 
 describe('Add Colleague Reducer Action', () => {
   test('handleSetColleagueData', () => {

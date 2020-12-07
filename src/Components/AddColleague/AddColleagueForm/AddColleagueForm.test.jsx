@@ -1,14 +1,10 @@
 import {
   render,
-  cleanup,
   screen,
 } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom/extend-expect';
 import AddColleagueForm from './index';
-
-afterEach(cleanup);
-
-const { default: userEvent } = require('@testing-library/user-event');
 
 describe('AddColleagueForm', () => {
   test('Component rendered successfully', () => {
