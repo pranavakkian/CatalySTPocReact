@@ -34,4 +34,11 @@ describe('LoginForm', () => {
     userEvent.click(screen.getByRole('button', { name: 'Submit' }));
     expect(mock).toHaveBeenNthCalledWith(1, 'abc', 'abc123');
   });
+  test('Submit Button Working Properly', () => {
+    render(<LoginForm handleLoginForm={mock} />);
+    userEvent.type(screen.getAllByRole('textbox')[0], '');
+    userEvent.type(screen.getByPlaceholderText('Password'), '');
+    userEvent.click(screen.getByRole('button', { name: 'Submit' }));
+    expect(mock).not.toHaveBeenNthCalledWith(1, 'abc', 'abc123');
+  });
 });

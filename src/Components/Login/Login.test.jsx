@@ -24,6 +24,8 @@ describe('Login', () => {
       },
     }));
     render(<Provider store={store}><Login /></Provider>);
+    userEvent.type(screen.getAllByRole('textbox')[0], 'admin');
+    userEvent.type(screen.getByPlaceholderText('Password'), 'admin');
     userEvent.click(screen.getByRole('button', { name: 'Submit' }));
     expect(screen.getByText('Invalid Credentials.')).toBeInTheDocument();
     userEvent.click(screen.getByRole('button', { name: 'OK' }));
