@@ -40,9 +40,9 @@ describe('AddColleagueForm', () => {
       },
     }));
     render(<Provider store={store}><AddColleagueForm /></Provider>);
-    expect(screen.getByPlaceholderText('contact')).toHaveValue(null);
-    userEvent.type(screen.getByPlaceholderText('contact'), '9976635127');
-    expect(screen.getByPlaceholderText('contact')).toHaveValue(9976635127);
+    expect(screen.getByPlaceholderText('Contact')).toHaveValue(null);
+    userEvent.type(screen.getByPlaceholderText('Contact'), '9976635127');
+    expect(screen.getByPlaceholderText('Contact')).toHaveValue(9976635127);
   });
 
   test('handles Dropdown change correctly', () => {
@@ -68,7 +68,7 @@ describe('AddColleagueForm', () => {
     }));
     render(<Provider store={store}><AddColleagueForm /></Provider>);
     userEvent.type(screen.getAllByRole('textbox')[0], 'abc');
-    userEvent.type(screen.getByPlaceholderText('contact'), '1234567899');
+    userEvent.type(screen.getByPlaceholderText('Contact'), '1234567899');
     userEvent.click(screen.getByRole('listbox'));
     userEvent.click(screen.getAllByRole('option')[0]);
     userEvent.click(screen.getByRole('button', { name: 'Submit' }));
@@ -107,7 +107,7 @@ describe('AddColleagueForm', () => {
       <Router history={history}><Provider store={store}><AddColleagueForm /></Provider></Router>,
     );
     userEvent.type(screen.getAllByRole('textbox')[0], 'abc');
-    userEvent.type(screen.getByPlaceholderText('contact'), '1234567899');
+    userEvent.type(screen.getByPlaceholderText('Contact'), '1234567899');
     userEvent.click(screen.getByRole('listbox'));
     userEvent.click(screen.getAllByRole('option')[0]);
     userEvent.click(screen.getByRole('button', { name: 'Submit' }));
@@ -116,7 +116,7 @@ describe('AddColleagueForm', () => {
     expect(store.getActions()).toStrictEqual(expectedAction);
     expect(history.location.pathname).toBe('/');
   });
-  test('Invalid Credentials', () => {
+  test('Data submmitted unsuccessfull', () => {
     const store = mockStore(() => ({
       ColleagueReducer: {
         data: [],
@@ -129,7 +129,6 @@ describe('AddColleagueForm', () => {
     userEvent.click(screen.getByRole('listbox'));
     userEvent.click(screen.getAllByRole('option')[0]);
     userEvent.click(screen.getByRole('button', { name: 'Submit' }));
-    userEvent.click(screen.getByRole('button', { name: 'Cancel' }));
     expect(store.getActions()).toStrictEqual([]);
   });
 });
