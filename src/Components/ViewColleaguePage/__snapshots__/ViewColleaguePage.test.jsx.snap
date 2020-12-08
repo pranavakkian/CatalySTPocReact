@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ViewColleaguePage Rendered View Colleague Page Successfully 1`] = `
+exports[`ViewColleaguePage Rendered ViewColleaguePageSuccessfully 1`] = `
 <div>
   <div>
     <h1
@@ -45,17 +45,17 @@ exports[`ViewColleaguePage Rendered View Colleague Page Successfully 1`] = `
             <td
               class=""
             >
-              --
+              Abc
             </td>
             <td
               class=""
             >
-              --
+              Engineer
             </td>
             <td
               class=""
             >
-              --
+              12345
             </td>
           </tr>
         </tbody>
